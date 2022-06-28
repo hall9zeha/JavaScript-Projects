@@ -1,2 +1,2 @@
 #Proyectos en JavaScript 
-* Cada uno de los proyectos esta en su propia rama 
+* Cada uno de los proyectos está en su propia rama 
