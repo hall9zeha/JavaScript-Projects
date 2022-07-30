@@ -1,0 +1,20 @@
+[
+     {
+          "id" : 1,
+          "nombre" : "Martha",
+          "empresa" : "Multivac",
+          "trabajo" : "Diseñadora gráfica"
+     },
+     {
+          "id" : 2,
+          "nombre" : "Aidé",
+          "empresa" : "Multivac",
+          "trabajo" : "Contadora"
+     },
+     {
+          "id" : 3,
+          "nombre" : "Barry",
+          "empresa" : "Multivac",
+          "trabajo" : "Desarrollador Movil"
+     }
+]
