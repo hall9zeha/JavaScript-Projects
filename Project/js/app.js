@@ -25,21 +25,30 @@ function validateForm(e){
 
 }
 
-function searchImages(){
+async function searchImages(){
     const valueSearch= document.querySelector('#termino').value
 
     const yourApiKey='your api key'
     const url=`https://pixabay.com/api/?key=${yourApiKey}&q=${valueSearch}&per_page=${perPage}&page=${currentPage}`;
     
-    fetch(url)
-        .then(result => result.json()) 
-        .then(result => {
+    //Con fetch y promises
+    // fetch(url)
+    //     .then(result => result.json()) 
+    //     .then(result => {
 
-            totalPages = calcPages(result.totalHits)
+    //         totalPages = calcPages(result.totalHits)
+    //         fillImagesInHtml(result.hits)
+    //     })
+
+    //con async await
+    try {
+        const response = await fetch(url);
+        const result= await response.json();
+        totalPages = calcPages(result.totalHits)
             fillImagesInHtml(result.hits)
-        })
-
-
+    } catch (error) {
+        console.log(error);
+    }    
 
 
 }
