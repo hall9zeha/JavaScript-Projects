@@ -23,15 +23,29 @@ function readValue(e){
     objSearch[e.target.name]=e.target.value;
     console.log(objSearch);
 }
+//Con fetch y promises
+// function checkCoins(){
+//     const url=`https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD`;
 
-function checkCoins(){
+
+//     fetch(url)
+//         .then(result => result.json())
+//         .then(result => getCoins(result.Data))
+//         .then(cryptoCurrency => selectCryptoCurrency(cryptoCurrency))
+// }
+//con async await
+async function checkCoins(){
     const url=`https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD`;
+    try {
+        const response = await fetch(url);
+        const result = await response.json();
+        const cryptoCurrency = await getCoins(result.Data);
 
+        selectCryptoCurrency(cryptoCurrency);
 
-    fetch(url)
-        .then(result => result.json())
-        .then(result => getCoins(result.Data))
-        .then(cryptoCurrency => selectCryptoCurrency(cryptoCurrency))
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 function selectCryptoCurrency(coins){
@@ -70,18 +84,34 @@ function showAlert(message){
         }, 2000);
     }
 }
+//Con fetch y promises
+// function fetchApiConvert(){
+//     const {coin, cryptoCurrency} = objSearch;
+//     showLoading();
+//     const url=`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${cryptoCurrency}&tsyms=${coin}`;
 
-function fetchApiConvert(){
+//     fetch(url)
+//         .then(response => response.json())
+//         .then(response => {
+//             fillHtml(  response.DISPLAY[cryptoCurrency][coin] );
+//         })
+
+// }
+//Con async await
+async function fetchApiConvert(){
     const {coin, cryptoCurrency} = objSearch;
     showLoading();
     const url=`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${cryptoCurrency}&tsyms=${coin}`;
 
-    fetch(url)
-        .then(response => response.json())
-        .then(response => {
-            fillHtml(  response.DISPLAY[cryptoCurrency][coin] );
-        })
+    try {
+        const response = await fetch(url);
+        const result = await response.json();
 
+        fillHtml(result.DISPLAY[cryptoCurrency][coin])
+
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 function fillHtml(response){
