@@ -1,0 +1,4 @@
+# ya que node modules es muy grande lo comentamos
+node_modules 
+package-lock.json
+
