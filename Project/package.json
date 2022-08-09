@@ -1,0 +1,14 @@
+{
+  "name": "testing_with_cypress",
+  "version": "1.0.0",
+  "description": "Haciendo pruebas con Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Barry Zea H.",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.4.0"
+  }
+}
