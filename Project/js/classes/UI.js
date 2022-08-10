@@ -1,10 +1,14 @@
 import { eliminarCita, cargarEdicion } from '../funciones.js';
-import { contenedorCitas, heading } from '../selectores.js';
+import {contenedorCitas, heading } from '../selectores.js';
 
 class UI {
 
     constructor({citas}) {
+
+
         this.textoHeading(citas);
+
+        
     }
 
     imprimirAlerta(mensaje, tipo) {

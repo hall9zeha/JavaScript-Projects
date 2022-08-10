@@ -1,4 +1,6 @@
-import { datosCita, nuevaCita } from '../funciones.js';
+import { datosCita,
+         
+    nuevaCita } from '../funciones.js';
 import { 
     mascotaInput, 
     propietarioInput, 
