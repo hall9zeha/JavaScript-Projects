@@ -4,12 +4,16 @@
   "description": "Primer proyecto página web agencia de viajes con node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon "
   },
+  "type": "module",
   "author": "Barry Zea H.",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "pug": "^3.0.2",
+    "sequelize": "^6.21.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
