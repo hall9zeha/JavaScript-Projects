@@ -4,7 +4,8 @@
   "description": "Primer proyecto página web agencia de viajes con node.js",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon "
+    "dev": "nodemon server",
+    "start": "node server"
   },
   "type": "module",
   "author": "Barry Zea H.",
@@ -16,6 +17,7 @@
     "sequelize": "^6.21.3"
   },
   "devDependencies": {
+    "dotenv": "^16.0.1",
     "nodemon": "^2.0.19"
   }
 }
