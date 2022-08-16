@@ -1,0 +1,10 @@
+.row.testimoniales
+    each testimonial in allTestimonials
+        .col-md-6.col-lg-4.mb-4
+            .card
+                .card-body
+                    blockquote.blockquote
+                    p.mb-0
+                        | #{testimonial.mensaje}
+                    footer.blockquote-footer
+                        | #{testimonial.nombre}

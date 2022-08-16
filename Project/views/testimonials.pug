@@ -3,22 +3,27 @@ extends ./layout/index
 block content
     main.container.mt-5 
         h1.text-center.mt-5 #{page}
+
+        blockquote.text-center Lee sobre nuestros cliente y sus experiencias 
+        include ./layout/blocksTestimonials
         .row
 
-
-            h2.d-block.w-100.text-center Agrega un testimonial
-
+            .col-md-12
+                h2.d-block.w-100.text-center Agrega un testimonial
+                if(errors)
+                    each error in errors
+                        .alert.col.alert-danger.text-center= error.msg
 
             .row.justify-content-center.col
                 .col-md-8
-                    form(action="" method="POST")
+                    form(action="/testimoniales" method="POST")
                         .form-group
-                            label(for="nombre") Nombre
-                            input#nombre(type="text", placeholder="Tu nombre", name="nombre", class="form-control")
+                            label(for="name") Nombre
+                            input#name(type="text", placeholder="Tu nombre", name="name", class="form-control", value= name)
                         .form-group
-                            label(for="correo") Correo electrónico
-                            input#correo(type="text", placeholder="Tu correo", name="correo", class="form-control")
+                            label(for="email") Correo electrónico
+                            input#email(type="text", placeholder="Tu correo", name="email", class="form-control", value= email)
                         .form-group
-                            label(for="mensaje") Mensaje
-                            textarea#mensaje( placeholder="Deja un mensaje", name="mensaje", class="form-control", rows=3)
+                            label(for="message") Mensaje
+                            textarea#message( placeholder="Deja un mensaje", name="message", class="form-control", rows=3)= message
                         input.btn.btn-success.btn-block(type="submit")

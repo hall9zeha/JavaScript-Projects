@@ -9,7 +9,9 @@ html(lang="en")
         link(rel='stylesheet',href='/css/bootstrap.css')
         link(rel='stylesheet',href='/css/style.css')
         
-    body 
+    body(class= clase) 
         include header
+        block slider
         block content
+
         include footer

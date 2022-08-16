@@ -1,5 +1,6 @@
 import express from 'express';
 import {beginningPage,usPage,contactPage,travelsPage,testimonialsPage,detailTravelPage} from '../controlers/pagesControlers.js'
+import {saveTestimonials} from '../controlers/testimonialsControler.js'
 const router = express.Router()
 
 
@@ -15,5 +16,6 @@ router.get('/viajes',travelsPage)
 router.get('/viajes/:slug',detailTravelPage)
 
 router.get('/testimoniales',testimonialsPage)
+router.post('/testimoniales',saveTestimonials)
 
 export default router;
