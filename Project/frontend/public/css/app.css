@@ -1,0 +1,49 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #AA076B; 
+    background: -webkit-linear-gradient(to right, #61045F, #AA076B);  
+    background: linear-gradient(to right, #61045F, #AA076B); 
+    font-size: 1.6rem;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+    color: white;
+    font-size: 4rem;
+}
+h2 {
+
+}
+h3 {
+    font-family: 'Staatliches', cursive;
+    color:#AA076B;
+    font-size: 2.4rem;
+}
+.btn {
+    font-size:1.4rem;
+}
+.fecha-alta {
+    font-family: 'Staatliches', cursive;
+    color: #AA076B;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.contacto p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+.list-group-item:hover {
+    background: white;
+}
+form {
+    border-radius: .3rem;
+}

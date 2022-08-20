@@ -8,7 +8,7 @@ exports.newClient = async (req,res,next) =>{
     
     //creamos un objeto con los datos del paciente obtenidos en req.body
 
-    const patient = new Patient(re.body);
+    const patient = new Patient(req.body);
 
     try {
         await patient.save();

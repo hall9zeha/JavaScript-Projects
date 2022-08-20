@@ -3,10 +3,30 @@ const mongoose = require('mongoose');
 const routes = require('./routes'); // como contiene un index.js no hay necesidad de ponerlo, JS lo leera automáticamente
 //creamos el servidor
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 
 const app = express();
 
+
+//escondemos la visibilidad de nuestra api con cors
+const whitelist = ['http://localhost:3000'];
+const corsOptions = {
+    origin:(origin, callback) => {
+        const exist = whitelist.some(domain=> domain === origin);
+        if(exist){
+            callback(null,true)
+        }
+        else{
+            callback(new Error('no permitido por CORS'))
+        }
+    }
+}
+
+//app.use(cors(corsOptions));
+//
+//pero mientras lo mantendremos abierto
+app.use(cors());
 // conectar a mongoDB
 
 mongoose.Promise = global.Promise;
