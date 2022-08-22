@@ -25,10 +25,22 @@
 # Desktop
 
 - Inicializamos ``` npm init ``` dentro de la carpeta "Desktop" 
-- Luego instalamos electrón ``` npm i -D electron@latest ```
-- Instalamos una dependencia para crear los instalables en electrón
+- Luego instalamos electron ``` npm i -D electron@latest ```
+- Instalamos una dependencia para crear los instalables en electron
     -``` npm install --save-dev electron-builder ```
     - Luego en package.json añadir el script:
     - "dist": "electron-builder -l" 
     - En mi caso crearé un instalable para linux con la bandera "-l", (para windows: "-w" y para Mac " -m")  
 - Finalmente ejecutar ``` npm run dist ```
+
+## Usar el proyecto de Frontend con electron
+
+nos ubicamos en la carpeta raiz del "frontend" e instalamos unas dependencias:
+- ``` npm install --save cross-env electron-is-dev ```, nos permitirá saber en que entorno estamos, si es de desarrollo o de producción.
+
+- ``` npm install concurrently wait-on electron electron-builder typescript ```
+    * ```concurrently``` para ejecutar dos o mas comandos a la vez
+    * ```wait-on``` para esperar a que el host esté activo y ejecutar todo lo demás
+    * ```electron ``` para crear la app de escritorio
+    * ```electron-builder``` para crear los instalables
+    * ```typescript``` porque es una dependencia exigida por electron

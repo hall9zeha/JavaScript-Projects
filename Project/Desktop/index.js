@@ -14,8 +14,8 @@ function createWindow(){
         //podriamos evitar que el usuario redimencione la pantalla con
         //resizable:false
         //También podemos limitar un mínimo redimensionable de altura y anchura
-        //min-width:600,
-        //min-height:700
+        //minWidth:600,
+        //minHeight:700
     });
 
     //Cuando la aplicación es cerrada liberamos los recursos de memoria
