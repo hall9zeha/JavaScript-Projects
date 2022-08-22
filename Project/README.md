@@ -21,3 +21,14 @@
 - ``` npm install react-router-dom ``` 
 - ``` npm install cors ```
 - ``` npm install sweetalert2 ```
+
+# Desktop
+
+- Inicializamos ``` npm init ``` dentro de la carpeta "Desktop" 
+- Luego instalamos electrón ``` npm i -D electron@latest ```
+- Instalamos una dependencia para crear los instalables en electrón
+    -``` npm install --save-dev electron-builder ```
+    - Luego en package.json añadir el script:
+    - "dist": "electron-builder -l" 
+    - En mi caso crearé un instalable para linux con la bandera "-l", (para windows: "-w" y para Mac " -m")  
+- Finalmente ejecutar ``` npm run dist ```
