@@ -1,12 +1,29 @@
 import React, {Fragment, useState} from 'react'
-import {Link, withRouter} from 'react-router-dom'
+import {Link, useNavigate, useLocation, useParams} from 'react-router-dom'
 import clientAxios from '../config/axios';
+let navigate;
+function withRouter(Component) {
+    
 
+    function ComponentWithRouterProp(props) {
+      let location = useLocation();
+      navigate = useNavigate();
+      let params = useParams();
+      return (
+        <Component
+          {...props}
+          router={{ location, navigate, params }}
+        />
+      );
+    }
+  
+    return ComponentWithRouterProp;
+  }
 
 //Los componentes deben comenzar con los nombres en mayúsculas siempre
 const NewDate = (props) => {
 
-   
+    
     //Generamos el state como objeto
     const [meeting, saveMeeting] = useState({
         name: '',
@@ -38,7 +55,9 @@ const NewDate = (props) => {
 
         props.saveConsult(true);
         //redireccionar
-        props.history.push('/')
+        //props.history.push('/')
+        //par las nuevas versiones de react 
+        navigate('/');
     }
 
     return ( 

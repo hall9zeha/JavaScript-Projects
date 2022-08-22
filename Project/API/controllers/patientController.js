@@ -59,6 +59,7 @@ exports.updatePatient = async(req,res,next) =>{
 }
 exports.deletePatient = async(req,res,next) =>{
     try {
+        
         await Patient.findByIdAndDelete({_id : req.params.id});
         res.json({message: 'El registro fue eliminado'});
     } catch (error) {

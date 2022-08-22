@@ -1,20 +1,41 @@
 import React ,{Fragment}from 'react'
-import {Link, withRouter} from 'react-router-dom'
+import {Link, useNavigate, useLocation, useParams} from 'react-router-dom'
 import clientAxios from '../config/axios'
 import Swal from 'sweetalert2';
+let navigate;
+function withRouter(Component) {
+    function ComponentWithRouterProp(props) {
+      let location = useLocation();
+      navigate = useNavigate();
+      let params = useParams();
+      return (
+        <Component
+          {...props}
+          router={{ location, navigate, params }}
+        />
+      );
+    }
+  
+    return ComponentWithRouterProp;
+  }
+  
 
 const Meeting = (props) => {
 
+    
     if(!props.meeting){
-        props.history.push('/')
+        //props.history.push('/')
+        //para las nuevas versiones de react
+        navigate('/')
         return null;
     }
-
+    console.log(props)
+   
     //extraemos props
     const{meeting:{_id,name,owner,date,time,signals,phone}} = props
-
-    const deleteMeeting=id=>{
-       
+    
+    const deleteMeeting = id =>{
+        
                 Swal.fire({
                     title: 'Estas seguro?',
                     text: "Una cita eliminada no se puede recuperar!",
@@ -31,12 +52,13 @@ const Meeting = (props) => {
                         'success'
                       )
                       //Eliminando de la base de datos
-                      clientAxios.delete(`/patients/${id}`)
-                      .then(
+                      //clientAxios.delete(`/patients/${id}`)
+                      clientAxios.delete("/patients/"+id)
+                        .then(
                           response => {
                               props.saveConsult(true)
                               console.log(response);
-                              props.history.push('/')
+                              navigate('/')
                           }
                           )
                           
@@ -78,15 +100,13 @@ const Meeting = (props) => {
                             </div>
                             <div className="d-flex">
                                 <button type="button"
-                                    className="text-uppercase py-2 px-5 font-weight-bold btn btn-dange col"
+                                    className="text-uppercase py-2 px-5 font-weight-bold btn btn-danger col"
                                     onClick={()=> deleteMeeting(_id)}
                                     >
                                             Eliminar &times;
                                 </button>
 
                             </div>
-
-
 
                         </div>
 
