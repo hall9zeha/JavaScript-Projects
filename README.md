@@ -4,14 +4,18 @@ Más de 30 proyectos escritos en JavaScript, desde los más sencillos hasta algu
 
 Cada proyecto  o ejemplo se encuentra en una rama propia.
 
-## algunos proyectos del repositorio
+## Algunos proyectos del repositorio
 
 * [Cotizador de criptomonedas - Cryptocurrency API](https://cotizador-cripto-moneda.netlify.app/)
+    - [Branch](https://github.com/hall9zeha/JavaScript-Projects/tree/CryptoCurrencyQuote)
 * [Buscador de imágenes - API de pixabay](https://github.com/hall9zeha/JavaScript-Projects/tree/ProyectPixabayApi)
+    
 * [Mostrar el clima de un lugar - API de OpenWeatherMap](https://github.com/hall9zeha/JavaScript-Projects/tree/ApiWeatherProyect)
 * [Buscar la letra de una canción - Lyrics.ovh API](https://buscador-lyric-music.netlify.app/)
+    - [Branch](https://github.com/hall9zeha/JavaScript-Projects/tree/ProyectSearchMusicLyric)
 * [Calcular préstamos - React](https://cotizador-prestamo-react.netlify.app/
 )
+    - [Branch](https://github.com/hall9zeha/JavaScript-Projects/tree/reactProyectLoans)
 * y otros más
 
 
