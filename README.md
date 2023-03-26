@@ -6,12 +6,12 @@ Cada proyecto  o ejemplo se encuentra en una rama propia.
 
 ## Algunos proyectos del repositorio
 
-* [Cotizador de criptomonedas - Cryptocurrency API](https://cotizador-cripto-moneda.netlify.app/) - [Branch](https://github.com/hall9zeha/JavaScript-Projects/tree/CryptoCurrencyQuote)
-* [Buscador de imágenes - API de pixabay](https://searching-pixabay-image.netlify.app/) - [Branch](https://github.com/hall9zeha/JavaScript-Projects/tree/ProyectPixabayApi)    
-* [Mostrar el clima de un lugar - API de OpenWeatherMap](https://busca-el-clima.netlify.app/) - [Branch](https://github.com/hall9zeha/JavaScript-Projects/tree/ApiWeatherProyect)
-* [Buscar la letra de una canción - Lyrics.ovh API](https://buscador-lyric-music.netlify.app/) - [Branch](https://github.com/hall9zeha/JavaScript-Projects/tree/ProyectSearchMusicLyric)
+* [Cotizador de criptomonedas - Cryptocurrency API](https://cotizador-cripto-moneda.netlify.app/) :rocket: - [Branch](https://github.com/hall9zeha/JavaScript-Projects/tree/CryptoCurrencyQuote)
+* [Buscador de imágenes - API de pixabay](https://searching-pixabay-image.netlify.app/)  :rocket: - [Branch](https://github.com/hall9zeha/JavaScript-Projects/tree/ProyectPixabayApi)    
+* [Mostrar el clima de un lugar - API de OpenWeatherMap](https://busca-el-clima.netlify.app/) :rocket: - [Branch](https://github.com/hall9zeha/JavaScript-Projects/tree/ApiWeatherProyect)
+* [Buscar la letra de una canción - Lyrics.ovh API](https://buscador-lyric-music.netlify.app/) :rocket: - [Branch](https://github.com/hall9zeha/JavaScript-Projects/tree/ProyectSearchMusicLyric)
 * [Calcular préstamos - React](https://cotizador-prestamo-react.netlify.app/
-) - [Branch](https://github.com/hall9zeha/JavaScript-Projects/tree/reactProyectLoans)   
+) :rocket: - [Branch](https://github.com/hall9zeha/JavaScript-Projects/tree/reactProyectLoans)   
 * y otros más
 
 
